@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://i.pinimg.com/564x/a0/ba/68/a0ba68c65dee41b47b723533879f27ac.jpg'); /* Replace 'background-image.jpg' with the path to your image */
+
+    
+  
+    background-attachment: fixed; /* Keeps the background image fixed while scrolling */
+  }
+
+ 
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .content {
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    padding: 25px;
+    border-radius: 15px;
+  }
+  
+  .heart {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation: beat 1s infinite alternate;
+  }
+  
+  .heart::before,
+  .heart::after {
+    content: "";
+    width: 50px;
+    height: 90px;
+    background: rgb(124, 34, 34);
+    border-radius: 50px 50px 0 0;
+    position: absolute;
+    top: 0;
+  }
+  
+  .heart::before {
+    left: 50px;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+  }
+  
+  .heart::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+  }
+  
+  
+  @keyframes beat {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+  
+
+
